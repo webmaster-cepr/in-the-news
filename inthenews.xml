@@ -21,6 +21,7 @@
 		<files folder="site">
 			<filename>index.html</filename>
 			<filename>inthenews.php</filename>
+			<filename>controller.php</filename>
 		</files>
 
 		<administration>
