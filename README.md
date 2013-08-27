@@ -1,6 +1,6 @@
 README
 
-This is Joomla 2.5 component that stores and displays press hits.
+This is an UNDER CONSTRUCTION Joomla 2.5 component that stores and displays press hits.
 
 AUTHORS
 
