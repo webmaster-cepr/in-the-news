@@ -9,8 +9,20 @@
 		<authorUrl>http://thegeekticket.com</authorUrl>
 		<copyright>No License</copyright>
 		
-		<version>0.0.4</version>
+		<version>0.0.6</version>
 		<description>Joomla 2.5 component that stores and displays press hits</description>
+
+		<install> <!-- Runs on install -->
+			<sql>
+				<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			</sql>
+		</install>
+
+		<uninstall><!-- Runs on uninstall -->
+			<sql>
+				<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			</sql>
+		</uninstall>
 
 		<update> <!--Runs on update; New in 2.5 -->
 			<schemas>

@@ -6,4 +6,22 @@
 				<![CDATA[COM_INTHENEWS_INTHENEWS_VIEW_DEFAULT_DESC]]>
 			</message>
 		</layout>
+
+		<fields name="request">
+			<fieldset name="request">
+			<field
+				name="id"
+				type="list"
+				label="COM_INTHENEWS_INTHENEWS_FIELD_GREETING_LABEL"
+				description="COM_INTHENEWS_INTHENEWS_FIELD_GREETING_DESC"
+				default="1"
+			>
+
+				<option value="1">Nothing to see here</option>
+				<option value="2">Still nothing to see</option>
+			</field>
+			</fieldset>
+		</fields>
+
+
 	</metadata>
