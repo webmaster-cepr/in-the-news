@@ -9,7 +9,7 @@
 		<authorUrl>http://thegeekticket.com</authorUrl>
 		<copyright>No License</copyright>
 		
-		<version>0.0.1</version>
+		<version>0.0.4</version>
 		<description>Joomla 2.5 component that stores and displays press hits</description>
 
 		<update> <!--Runs on update; New in 2.5 -->
@@ -23,6 +23,7 @@
 			<filename>inthenews.php</filename>
 			<filename>controller.php</filename>
 			<folder>views</folder>
+			<folder>models</folder>
 		</files>
 
 		<administration>

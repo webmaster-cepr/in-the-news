@@ -13,11 +13,20 @@ class InTheNewsViewInTheNews extends JView
 
 	function display($tpl = null)
 	
-		{	// This isn't going to do anything until the db is set up
-			$this->msg = "Nothing to see right now.";
+		{	
+			$this->msg = $this->get('Msg');
+
+			// Check for errors
+
+			if (count($errors = $this->get('Errors')))
+			{
+				JLog::add(implode('<br/>', $errors), JLog::WARNING, 'jerror');
+			}
+			// Display the view
 
 			parent::display($tpl);
 			
 		}
+
 		
 }
