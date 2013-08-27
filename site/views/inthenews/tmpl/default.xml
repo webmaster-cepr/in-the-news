@@ -3,7 +3,7 @@
 	<metadata>
 		<layout title="COM_INTHENEWS_INTHENEWS_VIEW_DEFAULT TITLE">
 			<message>
-				<![CDATA[COM_INTHENEWS_INTHENEWS_VIEW_DEFAULT_DESC]]>
+				COM_INTHENEWS_INTHENEWS_VIEW_DEFAULT_DESC
 			</message>
 		</layout>
 
