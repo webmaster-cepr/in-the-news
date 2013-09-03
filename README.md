@@ -22,5 +22,5 @@ COPYING/LICENSE
   
 BUGS
 
-  None at this time.
+  * Currently, saving a press hit resolves in a copy of that hit, but I'm not finished adding the fields to clip.xml.
 
