@@ -29,8 +29,24 @@ class InTheNewsViewClips extends JView
                 // Assign data to the view
                 $this->items = $items;
                 $this->pagination = $pagination;
+				
+				// Set the toolbar
+				$this->addToolBar();
  
                 // Display the template
                 parent::display($tpl);
         }
+		
+		/**
+		 * Setting the toolbar
+		 */
+		 
+		protected function addToolBar()
+			{
+				JToolBarHelper::title(JText::_('Press Hits Manager'));
+				JToolBarHelper::deleteList('', 'clips.delete');
+				JToolBarHelper::editList('clip.edit');
+				JToolBarHelper::addNew('clip.add');
+			}
+
 }

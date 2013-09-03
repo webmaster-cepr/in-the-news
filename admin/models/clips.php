@@ -19,7 +19,7 @@ class InTheNewsModelClips extends JModelList
                 $db = JFactory::getDBO();
                 $query = $db->getQuery(true);
                 // Select some fields
-                $query->select('title, publication, source, type, language, published');
+                $query->select('id, title, publication, source, type, language, published');
                 // From the inthenews table
                 $query->from('#__inthenews');
                 return $query;
