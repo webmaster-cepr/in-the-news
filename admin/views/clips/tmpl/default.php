@@ -4,6 +4,10 @@ defined('_JEXEC') or die('Restricted Access');
  
 // load tooltip behavior
 JHtml::_('behavior.tooltip');
+
+$listOrder = $this->state->get('list.ordering');
+$listDirn = $this->state->get('list.direction');
+
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_inthenews'); ?>" method="post" name="adminForm">
         <table class="adminlist">

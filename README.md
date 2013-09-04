@@ -22,5 +22,5 @@ COPYING/LICENSE
   
 BUGS
 
-  * Currently, saving a press hit resolves in a copy of that hit, but I'm not finished adding the fields to clip.xml.
+  * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending.
 

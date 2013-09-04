@@ -8,6 +8,7 @@ jimport('joomla.application.component.modellist');
  */
 class InTheNewsModelClips extends JModelList
 {
+
         /**
          * Method to build an SQL query to load the list data.
          *
@@ -22,6 +23,8 @@ class InTheNewsModelClips extends JModelList
                 $query->select('id, title, publication, source, type, language, published');
                 // From the inthenews table
                 $query->from('#__inthenews');
+				$query->order($this->getState('list.ordering', 'published') . ' ' .
+					$this->getState('list.direction', 'DESC'));
                 return $query;
         }
 }

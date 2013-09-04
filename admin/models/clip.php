@@ -51,11 +51,7 @@ class InTheNewsModelClip extends JModelAdmin
         protected function loadFormData() 
         {
                 // Check the session for previously entered form data.
-                $data = JFactory::getApplication()->getUserState('com_inthenews.edit.clip.data', array());
-                if (empty($data)) 
-                {
-                        $data = $this->getItem();
-                }
+                $data = $this->getItem();
                 return $data;
         }
 }

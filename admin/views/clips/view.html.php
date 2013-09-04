@@ -19,6 +19,7 @@ class InTheNewsViewClips extends JView
                 // Get data from the model
                 $items = $this->get('Items');
                 $pagination = $this->get('Pagination');
+				$state = $this->get('State');
  
                 // Check for errors.
                 if (count($errors = $this->get('Errors'))) 
@@ -29,6 +30,7 @@ class InTheNewsViewClips extends JView
                 // Assign data to the view
                 $this->items = $items;
                 $this->pagination = $pagination;
+				$this->state = $state;
 				
 				// Set the toolbar
 				$this->addToolBar();
