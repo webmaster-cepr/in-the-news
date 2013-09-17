@@ -22,5 +22,5 @@ COPYING/LICENSE
   
 BUGS
 
-  * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending.
+  * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending published date.
 
