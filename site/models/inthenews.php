@@ -3,44 +3,29 @@
 defined('_JEXEC') or die('Restricted access');
  
 // import Joomla modelitem library
-jimport('joomla.application.component.modelitem');
+jimport('joomla.application.component.modellist');
  
 /**
  * InTheNews Model
  */
-class InTheNewsModelInTheNews extends JModelItem
+class InTheNewsModelInTheNews extends JModelList
 {
-        /**
-         * @var string msg
-         */
-        protected $msg;
  
-        /**
-         * Get the message
-         * @return string The message to be displayed to the user
-         */
-        public function getMsg() 
-        {
-                if (!isset($this->msg)) 
-                {
-                        //Uses JInput if magic quotes is turned off. Falls back to use JRequest.
-                        if(!get_magic_quotes_gpc()) {
-                                $id = JFactory::getApplication()->input->get('id', 1, 'INT' );
-                        } else {
-                                $id = JRequest::getInt('id');
-                        }
- 
-                        switch ($id) 
-                        {
-                        case 2:
-                                $this->msg = 'Good bye World!';
-                        break;
-                        default:
-                        case 1:
-                                $this->msg = 'Hello World!';
-                        break;
-                        }
-                }
-                return $this->msg;
-        }
+	protected function getListQuery()
+	
+		{
+                $db   = JFactory::getDBO();
+                $query  = $db->getQuery(true);
+				$query->select('title, url, publication, italicized, DATE_FORMAT(published, "%M %d, %Y") AS published, source, type, language, published AS sortdate');
+				$query->from('#__inthenews');
+				$query->where('(type = "News" OR type = "TV/Video" OR type = "Radio Interview")');
+				$query->where('language = "English"');
+				$query->where('copy = "0"');
+				$query->where('live != "No"');
+				$query->order('sortdate DESC');
+		
+				return $query;
+		
+		}
+
 }
