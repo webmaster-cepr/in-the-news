@@ -9,7 +9,7 @@
 		<authorUrl>http://thegeekticket.com</authorUrl>
 		<copyright>No License</copyright>
 		
-		<version>0.0.9</version>
+		<version>0.0.11</version>
 		<description>Joomla 2.5 component that stores and displays press hits</description>
 
 		<install> <!-- Runs on install -->

@@ -8,7 +8,7 @@ jimport('joomla.application.component.modellist');
 /**
  * InTheNews Model
  */
-class InTheNewsModelInTheNews extends JModelList
+class InTheNewsModelInTheBlogs extends JModelList
 {
  
 	protected function getListQuery()
@@ -18,7 +18,7 @@ class InTheNewsModelInTheNews extends JModelList
                 $query  = $db->getQuery(true);
 				$query->select('title, url, publication, italicized, DATE_FORMAT(published, "%M %d, %Y") AS published, source, type, language, published AS sortdate');
 				$query->from('#__inthenews');
-				$query->where('(type = "News" OR type = "TV/Video" OR type = "Radio Interview")');
+				$query->where('type = "Blogs"');
 				$query->where('language = "English"');
 				$query->where('copy = "0"');
 				$query->where('live != "No"');

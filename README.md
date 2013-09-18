@@ -15,12 +15,15 @@ WEBSITE
   http://www.cepr.net.
   
 ChangeLog
-   
+
+* Filter added to backend view.
+* Front-end default views added for overall news and blogs.
+
 COPYING/LICENSE
 
   The Joomla software and default templates are copyright 2005-2012 Open Source Matters, Inc. and covered under a GNU General Public License.
   
 BUGS
 
-  * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending published date.
-
+ * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending published date.
+ * Textareas in default.xml view files strip HTML out despite filter being set to 'raw.'
