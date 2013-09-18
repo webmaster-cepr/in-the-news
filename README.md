@@ -18,6 +18,7 @@ ChangeLog
 
 * Filter added to backend view.
 * Front-end default views added for overall news and blogs.
+* Fixed bug with HTML in textarea by modifying text request in model.
 
 COPYING/LICENSE
 
@@ -26,4 +27,4 @@ COPYING/LICENSE
 BUGS
 
  * Unable to get sorting by column items in clips to work, so I've stripped it from the code. Database query sorts by descending published date.
- * Textareas in default.xml view files strip HTML out despite filter being set to 'raw.'
+

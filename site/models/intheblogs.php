@@ -45,7 +45,7 @@ class InTheNewsModelInTheBlogs extends JModelList
         {
                 if (!isset($this->msg)) 
                 {
-                	$intro_text = JRequest::getString('intro_text');
+                	$intro_text = JRequest::getString('intro_text','<html/>', 'METHOD', JREQUEST_ALLOWHTML);
 					$this->msg = $intro_text;
                 }
                 return $this->msg;
