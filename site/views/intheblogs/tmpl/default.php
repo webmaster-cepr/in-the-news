@@ -9,7 +9,7 @@ $cache->setCaching( 1 );
 
 ?>
 
-<p class="pageIntro"><?php echo $this->msg; ?></p>
+<span class="pageIntro"><?php echo $this->msg; ?></span>
 
 <hr/>
 

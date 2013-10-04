@@ -11,7 +11,7 @@
 			<fieldset name="request">
                 <field
                         name="year"
-						type="integer"
+			type="integer"
                         default="2013"
                         label="Choose year of hits to display"
                         description=""
@@ -22,22 +22,30 @@
 
                 <field
                         name="expert"
-						type="text"
+			type="text"
                         default=""
                         label="Choose expert"
                         description=""
                  />
+
+		 <field
+		 	name="language"
+			type="text"
+			default="English"
+			label="Choose language"
+			description=""
+		/>
 				 
-				<field 
-						name="intro_text" 
-						type="textarea" 
-						default="" 
-						label="Enter some text" 
-						description="" 
-						rows="10" 
-						cols="40" 
-						filter="raw"
-				/>
+		<field 
+			name="intro_text" 
+			type="textarea" 
+			default="" 
+			label="Enter some text" 
+			description="" 
+			rows="10" 
+			cols="40" 
+			filter="raw"
+		/>
 	 
 			</fieldset>
 		</fields>

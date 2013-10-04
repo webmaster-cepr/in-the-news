@@ -19,13 +19,16 @@ class InTheNewsModelInTheBlogs extends JModelList
 				$query->select('title, url, publication, italicized, DATE_FORMAT(published, "%M %d, %Y") AS published, source, type, language, published AS sortdate');
 				$query->from('#__inthenews');
 				$query->where('type = "Blogs"');
-				$query->where('language = "English"');
 				$query->where('copy = "0"');
 				$query->where('live != "No"');
 				
 				// This is where we determine the year of the hits based on the menu type
 				$year = JRequest::getInt('year');
 				$query->where ('published LIKE "%' . $year . '%"');
+				
+				// This is where we determine the language
+				$language = JRequest::getString('language');
+				$query->where ('language = "' . $language . '"');				
 				
 				// This is where we determine the expert to narrow down our hits
 				$expert = JRequest::getString('expert');

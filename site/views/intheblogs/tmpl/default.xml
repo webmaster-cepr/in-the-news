@@ -27,6 +27,14 @@
                         label="Choose expert"
                         description=""
                  />
+
+				 <field
+					name="language"
+					type="text"
+					default="English"
+					label="Choose language"
+					description=""
+				/>				 
 				 
 				<field 
 						name="intro_text" 
